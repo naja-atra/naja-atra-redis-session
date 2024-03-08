@@ -20,7 +20,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dependencies = ["naja_atra", "redis>=4.3"]
+dependencies = ["naja-atra", "redis>=4.3"]
 dynamic = ["version"]
 
 
