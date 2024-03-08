@@ -6,7 +6,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "naja_atra_redis_session"
+name = "naja-atra-redis-session"
 description = "This is a simple http server, use MVC like design."
 readme = "README.md"
 authors = [
