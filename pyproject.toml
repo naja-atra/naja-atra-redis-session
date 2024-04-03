@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "naja-atra-redis-session"
-description = "This is a simple http server, use MVC like design."
+description = "This is the redis session implementation for the project [naja atra](https://github.com/naja-atra/naja-atra)"
 readme = "README.md"
 authors = [
     { name = "keijack", email = "keijack.wu@gmail.com" }
@@ -29,5 +29,5 @@ dynamic = ["version"]
 version = {attr = "naja_atra_redis_session.version"}
 
 [project.urls]
-homepage = "https://github.com/keijack/naja-atra-redis-session"
-repository = "https://github.com/keijack/naja-atra-redis-session"
+homepage = "https://github.com/naja-atra/naja-atra-redis-session"
+repository = "https://github.com/naja-atra/naja-atra-redis-session"

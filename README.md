@@ -1,9 +1,8 @@
 # Redis Sesion Implementation for Naja Atra
-## What's this?
 
-This is the redis session implementation for the project `naja_atra`
+This is the redis session implementation for the project [naja atra](https://github.com/naja-atra/naja-atra)
 
-## How to use?
+## Usage
 
 ```python
 import naja_atra
