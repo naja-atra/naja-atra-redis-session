@@ -22,4 +22,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 name = "naja-atra-redis-session"
-version = "1.0.0"
+version = "1.0.1"

@@ -29,7 +29,7 @@ import redis
 import pickle
 
 from typing import Any, List, Tuple, Union
-from naja_atra import Session, SessionFactory, DEFAULT_ENCODING
+from naja_atra import HttpSession, HttpSessionFactory, DEFAULT_ENCODING
 from naja_atra.utils.logger import get_logger
 
 
@@ -62,7 +62,7 @@ def _to_byte(val: Union[bytes, str]) -> bytes:
         return f"{val}".encode(DEFAULT_ENCODING)
 
 
-class RedisSessionImpl(Session):
+class RedisSessionImpl(HttpSession):
 
     _KEY_PRE: str = "val_"
 
@@ -144,13 +144,13 @@ class RedisSessionImpl(Session):
         self.__redis.delete(self.__redis_hash_name)
 
 
-class RedisSessionFactory(SessionFactory):
+class RedisSessionFactory(HttpSessionFactory):
 
     def __init__(self, host="localhost", port=6379, db=0, username="", password="", redis_client: redis.Redis = None, object_serializer: ObjectSerializer = None):
         self.__obj_ser = object_serializer or ObjectSerializer()
         self.__redis = redis_client or _get_redis_client(host=host, port=port, db=db, username=username, password=password)
 
-    def get_session(self, session_id: str, create: bool = False) -> Session:
+    def get_session(self, session_id: str, create: bool = False) -> HttpSession:
         hash_name = _get_session_hash_name(session_id)
         if not self.__redis.exists(hash_name) and not create:
             return None
